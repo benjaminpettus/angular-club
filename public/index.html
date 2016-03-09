@@ -3,8 +3,16 @@
 <head>
   <title></title>
 </head>
-<body>
-  <h1>North Shore Jiu-Jitsu Club</h1>
+<body ng-app="Site" ng-controller="SiteControl">
+  <ng-view>
+  </ng-view> 
+  <h2>{{page.title}}</h2>
+  {{page.content}}
+  <li ng-class="{active: slug == 'home'}"><a href="/#/page/home">HOME</li>
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-route.js"></script>
+     <script src="/js/site.js" type="text/javascript"></script>
 </body>
 </html>

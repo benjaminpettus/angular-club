@@ -8,7 +8,9 @@ var app = express();
 
 app.use(express.static(path.resolve(__dirname, 'public')));
 
-
+app.get('/', function (req, res) {
+  res.render('index');
+});
 
 
 
